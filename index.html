@@ -158,13 +158,28 @@ h1,h2,h3,p,ul,dl,dd{margin:0}
 .chips li{padding:6px 11px;border:1px solid var(--line);border-radius:4px;font:13px/1.3 var(--f-mono);background:var(--bg)}
 @media (max-width:820px){.about{grid-template-columns:minmax(0,1fr)}}
 
+/* Sertifikat */
+.cert{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4.5vw,64px);align-items:center}
+.cert-img{display:block;min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -36px color-mix(in srgb,var(--accent) 55%,transparent);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .2s}
+.cert-img:hover{transform:translateY(-4px);border-color:var(--accent-text)}
+.cert-img img{display:block;width:100%;height:auto}
+.cert-body{min-width:0}
+.cert-body .kind{--w:var(--accent)}
+.cert-body h3{margin:14px 0 18px;font:800 clamp(1.8rem,3.4vw,2.7rem)/1.02 var(--f-display);letter-spacing:-.01em}
+.cert-meta{display:grid;gap:12px;margin-bottom:24px;padding-block:16px;border-block:1px solid var(--line)}
+.cert-meta div{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:12px;align-items:baseline}
+.cert-meta dt{font:12px/1.5 var(--f-mono);color:var(--muted)}
+.cert-meta dd{font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.cert-meta dd.mono{font-size:12.5px}
+@media (max-width:880px){.cert{grid-template-columns:minmax(0,1fr)}}
+
 /* Footer */
 .site-foot{padding-block:28px calc(28px + 8px);border-top:1px solid var(--line);font:12.5px/1.6 var(--f-mono);color:var(--muted)}
 .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
 
 @media (prefers-reduced-motion:reduce){
   .ch{animation:none;transition:none}
-  .shot,.btn,.rows a,.row-go{transition:none}
+  .shot,.cert-img,.btn,.rows a,.row-go{transition:none}
 }
 </style>
 </head>
@@ -315,7 +330,7 @@ h1,h2,h3,p,ul,dl,dd{margin:0}
         <div class="skills">
           <div>
             <h3>Teknologi</h3>
-            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub Pages</li></ul>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub Pages</li><li>Excel dasar</li></ul>
           </div>
           <div>
             <h3>Sudah pernah saya bangun</h3>
@@ -327,6 +342,30 @@ h1,h2,h3,p,ul,dl,dd{margin:0}
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec" id="sertifikat">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Sertifikat</p>
+        <h2>Kursus yang sudah saya selesaikan</h2>
+      </header>
+      <article class="cert">
+        <a class="cert-img" href="https://member.codingstudio.id/certificate/77E562CC08-77DFE6382C-75C1141F51" target="_blank" rel="noopener noreferrer" aria-label="Verifikasi sertifikat Fundamental Excel di tab baru">
+          <img src="img/sertifikat-excel.webp" width="1200" height="850" loading="lazy" alt="Sertifikat Fundamental Excel atas nama Hamied Bayu Wibisono dari Coding Studio, terbit di Jakarta pada 19 Juni 2024.">
+        </a>
+        <div class="cert-body">
+          <p class="kind">Certificate of Completion</p>
+          <h3>Fundamental Excel</h3>
+          <dl class="cert-meta">
+            <div><dt>Penyelenggara</dt><dd>Coding Studio (Flexy)</dd></div>
+            <div><dt>Terbit</dt><dd>Jakarta, 19 Juni 2024</dd></div>
+            <div><dt>ID sertifikat</dt><dd class="mono">77E562CC08-77DFE6382C-75C1141F51</dd></div>
+          </dl>
+          <a class="btn" href="https://member.codingstudio.id/certificate/77E562CC08-77DFE6382C-75C1141F51" target="_blank" rel="noopener noreferrer">Verifikasi sertifikat <span aria-hidden="true">&nearr;</span></a>
+        </div>
+      </article>
     </div>
   </section>
 
